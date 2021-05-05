@@ -1,12 +1,13 @@
 /* eslint-disable key-spacing */
 
 const palette = {
-  white: '#FFFFFF'
+  white: '#FFFFFF',
+  blue: '#1395BA'
 }
 
 const loadComponentColors = () => {
   return {
-    background: palette.white
+    navbarBackground: palette.blue
   }
 }
 
