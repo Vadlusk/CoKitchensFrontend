@@ -13,7 +13,11 @@ const useTeamMembers = () => {
   useEffect(async () => {
     const rawTeamMembers = await getTeamMembers()
 
-    setTeamMembers(rawTeamMembers)
+    const leadership = rawTeamMembers.filter(teamMember => teamMember.role === 'Co-Director')
+    const advisors = rawTeamMembers.filter(teamMember => teamMember.role === 'Advisor')
+    const communityRegenerators = rawTeamMembers.filter(teamMember => (teamMember.role !== 'Co-Director') && (teamMember.role !== 'Advisor'))
+
+    setTeamMembers({ leadership, advisors, communityRegenerators })
     setAreTeamMembersLoaded(true)
   }, [])
 
