@@ -1,31 +1,33 @@
 import React from 'react'
+import { AppBar, Toolbar, Typography, Button } from '@material-ui/core'
+
 import styled from 'styled-components'
 
-import { color } from '../../styles/colors'
-
-const Navbar = () => (
-  <S.Navbar>
-    <S.Brandname href="/">CoKitchens</S.Brandname>
-
-    <S.Link href="/calendar">Calendar</S.Link>
-    <S.Link href="/toolkit"> Toolkit </S.Link>
-    <S.Link href="/kitchens">Kitchens</S.Link>
-    <S.Link href="/stories"> Stories </S.Link>
-    <S.Link href="/team">    Team    </S.Link>
-    <S.Link href="/contact"> Contact </S.Link>
-  </S.Navbar>
-)
+const Navbar = () => {
+  return (
+    <div>
+      <AppBar position="static">
+          <Toolbar>
+            <Typography color="inherit">
+              <S.Link>CoKitchens</S.Link>
+            </Typography>
+            <div>
+              <Button href="/calendar" color="inherit">Calendar</Button>
+              <Button href="/toolkit" color="inherit"> Toolkit </Button>
+              <Button href="/kitchens" color="inherit">Kitchens</Button>
+              <Button href="/stories" color="inherit"> Stories </Button>
+              <Button href="/team" color="inherit">    Team    </Button>
+              <Button href="/contact" color="inherit"> Contact </Button>
+            </div>
+          </Toolbar>
+      </AppBar>
+    </div>
+  )
+}
 
 export default Navbar
 
 const S = {
-  Navbar: styled.div`
-    height: 60px;
-    width: 100%;
-    background: ${color('navbarBackground')};
-  `,
-  Brandname: styled.a`
-  `,
   Link: styled.a`
   `
 }
