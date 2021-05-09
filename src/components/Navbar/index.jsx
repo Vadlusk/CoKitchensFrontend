@@ -84,7 +84,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <AppBar position="static">
+      <AppBar position="fixed">
         {mobileView ? displayMobile() : displayDesktop()}
       </AppBar>
     </div>
