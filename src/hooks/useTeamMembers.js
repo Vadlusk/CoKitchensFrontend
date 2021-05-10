@@ -4,7 +4,7 @@ import { getTeamMembers } from '../services'
 
 const useTeamMembers = () => {
   const [teamMembers, setTeamMembers] = useState({
-    leadership: [],
+    stewards: [],
     advisors: [],
     communityRegenerators: []
   })
@@ -13,11 +13,11 @@ const useTeamMembers = () => {
   useEffect(async () => {
     const rawTeamMembers = await getTeamMembers()
 
-    const leadership = rawTeamMembers.filter(teamMember => teamMember.role === 'Co-Director')
+    const stewards = rawTeamMembers.filter(teamMember => teamMember.role === 'Platform Steward')
     const advisors = rawTeamMembers.filter(teamMember => teamMember.role === 'Advisor')
-    const communityRegenerators = rawTeamMembers.filter(teamMember => (teamMember.role !== 'Co-Director') && (teamMember.role !== 'Advisor'))
+    const communityRegenerators = rawTeamMembers.filter(teamMember => (teamMember.role !== 'Platform Steward') && (teamMember.role !== 'Advisor'))
 
-    setTeamMembers({ leadership, advisors, communityRegenerators })
+    setTeamMembers({ stewards, advisors, communityRegenerators })
     setAreTeamMembersLoaded(true)
   }, [])
 

@@ -24,7 +24,7 @@ const Navbar = () => {
 
   const displayDesktop = () => {
     return (
-      <Toolbar>
+      <Toolbar style={{ background: '#0c4767' }}>
         <Typography color="inherit">
           <S.Link href="/" color="inherit">CoKitchens</S.Link>
         </Typography>
