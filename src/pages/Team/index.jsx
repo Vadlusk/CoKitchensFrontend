@@ -1,20 +1,17 @@
 import React from 'react'
 import TeamCard from '../../components/TeamCard'
+import TeamRoleBanner from '../../components/TeamRoleBanner'
 
-import { Typography, Divider } from '@material-ui/core'
+import { Typography } from '@material-ui/core'
 
 import useTeamMembers from '../../hooks/useTeamMembers'
-
-const bannerColor = '#307351' // TODO: make primary, secondary... colors
-const bannerTextColor = 'white'
 
 const Team = () => {
   const { teamMembers } = useTeamMembers()
 
   return (
     <>
-      <Typography variant="h4" align="center" style={{ padding: '30px 0', color: bannerTextColor, background: bannerColor }}>Stewards of this Commons</Typography>
-      <Divider />
+      <TeamRoleBanner role='Stewards of this Platform'></TeamRoleBanner>
       <Typography>
         {teamMembers.stewards.map(steward => // shuffle these everytime
           <>
@@ -22,9 +19,7 @@ const Team = () => {
           </>
         )}
       </Typography>
-      <Divider />
-      <Typography variant="h4" align="center" style={{ padding: '30px 0', color: bannerTextColor, background: bannerColor }}>Advisors</Typography>
-      <Divider />
+      <TeamRoleBanner role='Advisors'></TeamRoleBanner>
       <Typography>
         {teamMembers.advisors.map(advisor => // shuffle these everytime
           <>
@@ -32,9 +27,7 @@ const Team = () => {
           </>
         )}
       </Typography>
-      <Divider />
-      <Typography variant="h4" align="center"style={{ padding: '30px 0', color: bannerTextColor, background: bannerColor }}>Community Regenerators</Typography>
-      <Divider />
+      <TeamRoleBanner role='Community Regenerators'></TeamRoleBanner>
       <Typography>
         {teamMembers.communityRegenerators.map(regenerator => // shuffle these everytime
           <>
