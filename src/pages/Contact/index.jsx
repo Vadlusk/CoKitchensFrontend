@@ -38,7 +38,7 @@ const S = {
   position: relative;
   top: 20%;
   width: 66%;
-  margin: 0 auto;
+  margin-left: 30px;
   font-family: 'Gt super text book', Georgia, sans-serif;
   font-size: 27px;
   padding: 50px 0;
