@@ -32,12 +32,12 @@ const S = {
   Title: styled.div`
   width: 100%;
   padding: 60px 0;
-  margin-top: 60px;
   font-family: 'Gt super text book', Georgia, sans-serif;
   font-size: 75px;
   text-align: center;
   border-bottom: 4px solid black;
-  background-color: #fff1e8;
+  background-color: #307351;
+  color: white;
   `,
   BackgroundImgage: styled.div`
   background-image: url(${cedarBackgroundImage});
