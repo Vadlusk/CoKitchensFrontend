@@ -20,6 +20,10 @@ const Navbar = () => {
     }
     setResponsiveness()
     window.addEventListener('resize', () => setResponsiveness())
+
+    return function cleanup () {
+      window.removeEventListener('resize')
+    }
   }, [])
 
   const displayDesktop = () => {
