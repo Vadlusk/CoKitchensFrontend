@@ -1,17 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Card, Typography, Divider } from '@material-ui/core'
+import { Card, Typography, CardMedia, CardContent, CardHeader } from '@material-ui/core'
 
 const KitchenCard = (props) => {
   return (
     <>
-      <Card key={props.name} />
-        <Typography variant="h3">{props.name}</Typography>
-        <Divider />
-        <Typography variant="h6">{props.description}</Typography>
-      <Card />
-    </>
+      <Card style={{ maxWidth: '800px', margin: '30px' }} key={props.name} elevation={3}>
+        <CardHeader
+         title={props.name}
+        />
+        <CardMedia
+          style={{ height: '300px', width: '95%', margin: '20px auto' }}
+          image={props.img}
+          title={props.name}
+        />
+        <CardContent>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {props.description}
+          </Typography>
+         </CardContent>
+       </Card>
+     </>
   )
 }
 
