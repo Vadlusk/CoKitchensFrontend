@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { Typography } from '@material-ui/core'
 
-const TeamRoleBanner = (props) => {
+const TitleBanner = (props) => {
   return (
     <Typography
       variant="h4"
@@ -18,13 +18,13 @@ const TeamRoleBanner = (props) => {
         margin: '10px auto'
       }}
     >
-      {props.role}
+      {props.children}
     </Typography>
   )
 }
 
-export default TeamRoleBanner
+export default TitleBanner
 
-TeamRoleBanner.propTypes = {
-  role: PropTypes.string
+TitleBanner.propTypes = {
+  children: PropTypes.node.isRequired
 }

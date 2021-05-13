@@ -1,6 +1,6 @@
 import React from 'react'
 import TeamCard from '../../components/TeamCard'
-import TeamRoleBanner from '../../components/TeamRoleBanner'
+import TitleBanner from '../../components/TitleBanner'
 
 import { Typography } from '@material-ui/core'
 
@@ -11,7 +11,7 @@ const Team = () => {
 
   return (
     <>
-      <TeamRoleBanner role='Stewards of this Platform'></TeamRoleBanner>
+      <TitleBanner>Stewards of this Platform</TitleBanner>
       <Typography>
         {teamMembers.stewards.map(steward => // shuffle these everytime
           <>
@@ -19,7 +19,7 @@ const Team = () => {
           </>
         )}
       </Typography>
-      <TeamRoleBanner role='Advisors'></TeamRoleBanner>
+      <TitleBanner>Advisors</TitleBanner>
       <Typography>
         {teamMembers.advisors.map(advisor => // shuffle these everytime
           <>
@@ -27,7 +27,7 @@ const Team = () => {
           </>
         )}
       </Typography>
-      <TeamRoleBanner role='Community Regenerators'></TeamRoleBanner>
+      <TitleBanner>Community Regenerators</TitleBanner>
       <Typography>
         {teamMembers.communityRegenerators.map(regenerator => // shuffle these everytime
           <>
