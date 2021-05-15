@@ -19,10 +19,10 @@ const Navbar = () => {
         : setState((prevState) => ({ ...prevState, mobileView: false }))
     }
     setResponsiveness()
-    window.addEventListener('resize', () => setResponsiveness())
+    const eventListener = window.addEventListener('resize', () => setResponsiveness())
 
     return function cleanup () {
-      window.removeEventListener('resize')
+      window.removeEventListener('resize', eventListener)
     }
   }, [])
 
