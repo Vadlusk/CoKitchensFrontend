@@ -41,7 +41,5 @@ const S = {
   margin-left: 30px;
   font-family: 'Gt super text book', Georgia, sans-serif;
   font-size: 27px;
-  padding: 50px 0;
-  color: 'white'
   `
 }
