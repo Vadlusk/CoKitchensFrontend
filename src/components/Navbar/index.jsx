@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
-
 import { AppBar, Toolbar, Typography, Button, IconButton, Drawer } from '@material-ui/core'
-import MenuIcon from '@material-ui/icons/Menu'
 
 import styled from 'styled-components'
 
@@ -34,9 +32,9 @@ const Navbar = () => {
         </Typography>
         <S.Menu>
           <Button href="/calendar" color="inherit">Calendar</Button>
-          <Button href="/tools" color="inherit"> Toolkit </Button>
           <Button href="/kitchens" color="inherit">Kitchens</Button>
           <Button href="/stories" color="inherit"> Stories </Button>
+          <Button href="/tools" color="inherit"> Toolkit </Button>
           <Button href="/team" color="inherit">    Team    </Button>
           <Button href="/contact" color="inherit"> Contact </Button>
         </S.Menu>
@@ -61,7 +59,7 @@ const Navbar = () => {
           onClick: handleDrawerOpen
         }}
       >
-        <MenuIcon />
+        <p>Menu</p>
       </IconButton>
       <Drawer
          {...{
