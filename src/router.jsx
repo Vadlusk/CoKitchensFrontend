@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 
 import Home from './pages/Home'
 import Calendar from './pages/Calendar'
+import Toolkit from './pages/Toolkit'
 import Kitchens from './pages/Kitchens'
 import Stories from './pages/Stories'
 import Team from './pages/Team'
@@ -16,6 +17,7 @@ const AppRouter = () => (
 
     <Route path="/" exact>    <Home /></Route>
     <Route path="/calendar">  <Calendar /></Route>
+    <Route path="/tools">     <Toolkit /></Route>
     <Route path="/kitchens">  <Kitchens /></Route>
     <Route path="/stories">   <Stories /></Route>
     <Route path="/team">      <Team /></Route>

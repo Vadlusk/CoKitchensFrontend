@@ -11,7 +11,7 @@ const Contact = () => {
         <S.BackgroundImgage></S.BackgroundImgage>
       </S.BackgroundImageWrapper>
       <S.CommunityMealsDescription>
-        <p>Email: cokitchens@cokitchens.com</p>
+        <p>Email: benji.cokitchens@gmail.com</p>
       </S.CommunityMealsDescription>
     </>
   )

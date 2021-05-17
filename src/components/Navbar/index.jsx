@@ -34,7 +34,7 @@ const Navbar = () => {
         </Typography>
         <S.Menu>
           <Button href="/calendar" color="inherit">Calendar</Button>
-          <Button href="/toolkit" color="inherit"> Toolkit </Button>
+          <Button href="/tools" color="inherit"> Toolkit </Button>
           <Button href="/kitchens" color="inherit">Kitchens</Button>
           <Button href="/stories" color="inherit"> Stories </Button>
           <Button href="/team" color="inherit">    Team    </Button>
