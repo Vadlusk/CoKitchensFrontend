@@ -1,7 +1,7 @@
 import React from 'react'
 
 import StoryCard from '../../components/StoriesCard'
-import { Typography, Button, TextField } from '@material-ui/core'
+import { Typography, Button, FormControl, InputLabel, Input } from '@material-ui/core'
 
 import useStories from '../../hooks/useStories'
 import styled from 'styled-components'
@@ -29,20 +29,16 @@ const Stories = () => {
         </>
       )}
       <S.EmailSubscriptionSection>
-        <Typography style={{ color: 'white', width: '45%', padding: '30px', display: 'inline-block' }}>
-          Leave your email if you would like to know when new posts are published.
+      <div style={{ padding: '50px', display: 'grid' }}>
+        <Typography style={{ margin: 'auto', paddingBottom: '20px' }}>
+          Drop us your email if you would like to know when we publish new articles or videos.
         </Typography>
-        <form style={{ display: 'inline-block' }}>
-          <TextField
-            label="Email"
-            id="filled-size-small"
-            defaultValue="Small"
-            variant="outlined"
-            size="small"
-          />
-          <Button></Button>
-        </form>
-
+        <FormControl style={{ margin: 'auto' }}>
+          <InputLabel>Email</InputLabel>
+          <Input id="email" aria-describedby="Email" />
+          <Button id="email">Submit</Button>
+        </FormControl>
+      </div>
       </S.EmailSubscriptionSection>
     </>
   )
@@ -76,11 +72,12 @@ const S = {
   font-family: 'Gt super text book', Georgia, sans-serif;
   font-size: 27px;
   padding: 50px 0;
-  color: 'white'
+  color: '#d4d4d4'
   `,
   EmailSubscriptionSection: styled.div`
   width: 100%;
-  background: black;
+  background: #d4d4d4;
   height: 200px;
+  border-top: 1px solid black;
   `
 }

@@ -5,7 +5,7 @@ import { Card, Typography, CardMedia, CardContent, CardHeader, Divider } from '@
 import SkillCard from '../SkillCard'
 
 const KitchenCard = (props) => {
-  const kitchenTitle = `${props.name} - ${props.locationName}`
+  const kitchenTitle = `CoKitchen - ${props.name}, ${props.locationName}`
   const distributingSkills = ['Forestry', 'Composting', 'Carpentry', 'Upcycling']
   const learningSkills = ['Water Management', 'Tree Grafting']
 
