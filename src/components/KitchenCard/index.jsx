@@ -1,29 +1,79 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Card, Typography, CardMedia, CardContent, CardHeader, Divider } from '@material-ui/core'
 
-import { Card, Typography, CardMedia, CardContent, CardHeader } from '@material-ui/core'
+import SkillCard from '../SkillCard'
 
 const KitchenCard = (props) => {
+  const kitchenTitle = `${props.name} - ${props.locationName}`
+  const distributingSkills = ['Forestry', 'Composting', 'Carpentry', 'Upcycling']
+  const learningSkills = ['Water Management', 'Tree Grafting']
+
   return (
     <>
-      <Card style={{ maxWidth: '1300px', margin: '30px' }} elevation={3}>
+      <Card style={{
+        maxWidth: '1300px',
+        margin: '30px'
+      }} elevation={0}>
         <CardHeader
-         title={props.name}
-         style={{ paddingBottom: '3px', paddingLeft: '20px' }}
+         title={kitchenTitle}
+         style={{ padding: '20px' }}
         />
-        <Typography variant="body2" color="textSecondary" component="p">
-          {props.location_name}
-        </Typography>
-        <CardMedia
-          style={{ height: '300px', width: '95%', margin: '0px auto' }}
-          image={props.img}
-          title={props.name}
-        />
-        <CardContent>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {props.description}
-          </Typography>
-         </CardContent>
+        <Divider />
+        <div style={{ padding: '20px', paddingBottom: '40px' }}>
+          <CardMedia
+            style={{
+              height: '300px',
+              width: '45%',
+              margin: '0px auto',
+              display: 'inline-block'
+            }}
+            image={props.img}
+            title={props.name}
+          />
+          <CardContent style={{
+            display: 'inline-block',
+            width: '45%',
+            verticalAlign: 'top'
+          }}>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {props.description}
+            </Typography>
+           </CardContent>
+        </div>
+        <Divider textAlign="center">Local Skillsets</Divider>
+        <div
+          style={{
+            width: '45%',
+            display: 'inline-block',
+            padding: '20px'
+          }}
+        >
+          <Typography variant="h6"
+            style={{ paddingBottom: '10px' }}
+          >Skills to Distribute</Typography>
+          {distributingSkills.map(skill =>
+            <>
+              <SkillCard skill={skill}></SkillCard>
+            </>
+          )}
+        </div>
+        <div
+          style={{
+            width: '45%',
+            display: 'inline-block',
+            padding: '20px'
+          }}
+        >
+          <Typography variant="h6"
+            style={{ paddingBottom: '10px' }}
+          >Looking to Learn</Typography>
+          {learningSkills.map(skill =>
+            <>
+              <SkillCard skill={skill}></SkillCard>
+            </>
+          )}
+        </div>
        </Card>
      </>
   )
@@ -35,5 +85,5 @@ KitchenCard.propTypes = {
   img: PropTypes.string,
   name: PropTypes.string,
   description: PropTypes.string,
-  location_name: PropTypes.string
+  locationName: PropTypes.string
 }

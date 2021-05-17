@@ -12,7 +12,13 @@ const Kitchens = () => {
     <>
         {kitchens.map(kitchen =>
           <>
-          <KitchenCard key={kitchen.name} name={kitchen.name} img={kitchen.img} description={kitchen.description}></KitchenCard>
+          <KitchenCard
+            key={kitchen.name}
+            name={kitchen.name}
+            img={kitchen.img}
+            description={kitchen.description}
+            locationName={kitchen.location_name}
+          ></KitchenCard>
           </>
         )}
       <Divider />
