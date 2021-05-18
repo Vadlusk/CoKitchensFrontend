@@ -1,6 +1,7 @@
 import React from 'react'
 
 import StoryCard from '../../components/StoriesCard'
+import BackgroundImageBanner from '../../components/BackgroundImageBanner'
 import { Typography, Button, FormControl, InputLabel, Input } from '@material-ui/core'
 
 import useStories from '../../hooks/useStories'
@@ -12,9 +13,7 @@ const Stories = () => {
 
   return (
     <>
-      <S.BackgroundImageWrapper>
-        <S.BackgroundImgage></S.BackgroundImgage>
-      </S.BackgroundImageWrapper>
+      <BackgroundImageBanner img={arkansasRiverBackgroundImage}></BackgroundImageBanner>
       {stories.map(story =>
         <>
           <StoryCard
@@ -47,23 +46,6 @@ const Stories = () => {
 export default Stories
 
 const S = {
-  BackgroundImageWrapper: styled.div`
-  position: relative;
-  width: 1450px;
-  height: 570px;
-  `,
-  BackgroundImgage: styled.div`
-  background-image: url(${arkansasRiverBackgroundImage});
-  width: 1450px;
-  height: 570px;
-  position: absolute;
-  background-size: cover; /* or contain depending on what you want */
-  background-position: center center;
-  background-repeat: no-repeat;
-  top: 0;
-  left: 0;
-  border-bottom: 4px solid black;
-  `,
   CommunityMealsDescription: styled.div`
   position: relative;
   top: 20%;
