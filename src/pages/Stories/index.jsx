@@ -29,7 +29,7 @@ const Stories = () => {
         </>
       )}
       <S.EmailSubscriptionSection>
-      <div style={{ padding: '50px', display: 'grid' }}>
+      <div style={{ padding: '50px', display: 'grid', paddingBottom: '0' }}>
         <Typography style={{ margin: 'auto', paddingBottom: '20px' }}>
           Drop us your email if you would like to know when we publish new articles or videos.
         </Typography>

@@ -26,7 +26,7 @@ const Navbar = () => {
 
   const displayDesktop = () => {
     return (
-      <Toolbar style={{ background: '#0c4767' }}>
+      <Toolbar>
         <Typography color="inherit">
           <S.Link href="/" color="inherit">CoKitchens</S.Link>
         </Typography>
@@ -86,7 +86,10 @@ const Navbar = () => {
 
   return (
     <div>
-      <AppBar position="fixed">
+      <AppBar
+        position="fixed"
+        style={{ background: '#0c4767' }}
+      >
         {mobileView ? displayMobile() : displayDesktop()}
       </AppBar>
     </div>
