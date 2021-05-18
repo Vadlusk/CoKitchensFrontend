@@ -6,7 +6,7 @@ import { Typography, Button, FormControl, InputLabel, Input } from '@material-ui
 
 import useStories from '../../hooks/useStories'
 import styled from 'styled-components'
-import arkansasRiverBackgroundImage from './Assets/arkansas-river-background.png'
+import arkansasRiverBackgroundImage from './Assets/reese-hill-background.jpeg'
 
 const Stories = () => {
   const { stories } = useStories()

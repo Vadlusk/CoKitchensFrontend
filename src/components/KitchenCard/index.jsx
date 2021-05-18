@@ -13,7 +13,8 @@ const KitchenCard = (props) => {
     <>
       <Card style={{
         maxWidth: '1300px',
-        margin: '30px'
+        margin: '30px',
+        borderBottom: '1px solid black'
       }} elevation={0}>
         <CardHeader
          title={kitchenTitle}
