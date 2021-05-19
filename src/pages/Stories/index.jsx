@@ -6,14 +6,14 @@ import { Typography, Button, FormControl, InputLabel, Input } from '@material-ui
 
 import useStories from '../../hooks/useStories'
 import styled from 'styled-components'
-import arkansasRiverBackgroundImage from './Assets/reese-hill-background.jpeg'
+import rockBackgroundImage from './Assets/rock-background.png'
 
 const Stories = () => {
   const { stories } = useStories()
 
   return (
     <>
-      <BackgroundImageBanner img={arkansasRiverBackgroundImage}></BackgroundImageBanner>
+      <BackgroundImageBanner img={rockBackgroundImage}></BackgroundImageBanner>
       {stories.map(story =>
         <>
           <StoryCard

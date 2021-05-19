@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { AppBar, Toolbar, Typography, Button, IconButton, Drawer } from '@material-ui/core'
+import { Menu } from '@material-ui/icons'
 
 import styled from 'styled-components'
 
@@ -30,14 +31,14 @@ const Navbar = () => {
         <Typography color="inherit">
           <S.Link href="/" color="inherit">CoKitchens</S.Link>
         </Typography>
-        <S.Menu>
+        <S.DesktopMenu>
           <Button href="/calendar" color="inherit">Calendar</Button>
           <Button href="/kitchens" color="inherit">Kitchens</Button>
           <Button href="/stories" color="inherit"> Stories </Button>
           <Button href="/tools" color="inherit"> Toolkit </Button>
           <Button href="/team" color="inherit">    Team    </Button>
           <Button href="/contact" color="inherit"> Contact </Button>
-        </S.Menu>
+        </S.DesktopMenu>
       </Toolbar>
     )
   }
@@ -59,7 +60,7 @@ const Navbar = () => {
           onClick: handleDrawerOpen
         }}
       >
-        <p>Menu</p>
+        <Menu />
       </IconButton>
       <Drawer
          {...{
@@ -69,17 +70,24 @@ const Navbar = () => {
          }}
        >
          <div>
-           <S.Menu>
+           <S.MobileMenu>
              <Button href="/calendar" color="inherit">Calendar</Button>
              <Button href="/toolkit" color="inherit"> Toolkit </Button>
              <Button href="/kitchens" color="inherit">Kitchens</Button>
              <Button href="/stories" color="inherit"> Stories </Button>
              <Button href="/team" color="inherit">    Team    </Button>
              <Button href="/contact" color="inherit"> Contact </Button>
-           </S.Menu>
+           </S.MobileMenu>
          </div>
        </Drawer>
-      <S.Link href="/" color="inherit">CoKitchens</S.Link>
+       <Typography
+         style={{
+           display: 'inline',
+           marginLeft: '75px'
+         }}
+         color="inherit">
+         <S.Link href="/" color="inherit">CoKitchens</S.Link>
+       </Typography>
       </>
     )
   }
@@ -88,7 +96,11 @@ const Navbar = () => {
     <div>
       <AppBar
         position="fixed"
-        style={{ background: '#0c4767' }}
+        style={{
+          background: '#0c4767',
+          display: `${mobileView ? 'block' : 'inline-block'}`,
+          height: '64px'
+        }}
       >
         {mobileView ? displayMobile() : displayDesktop()}
       </AppBar>
@@ -103,7 +115,11 @@ const S = {
   color: white;
   text-decoration: none;
   `,
-  Menu: styled.div`
+  DesktopMenu: styled.div`
   margin: auto;
+  `,
+  MobileMenu: styled.div`
+  display: grid;
+  padding: 35px;
   `
 }
