@@ -13,10 +13,10 @@ const Home = () => {
     <>
       <BackgroundImageBanner
         img={reeseHillBackgroundImage}
-        content="CoKitchens is striving to become a vibrant home for collective experimentation. We are looking to walk together with communities large and small in the discovering and rediscovering of ways to manage our own evolution. We believe that any evolutionary pathway that does not hold Earth Ethics as its foundation will only be temporary at best, which is why our experiments focus on local food as a means of weaving together relationships between our communities and the land."
         height={topBannerHeight}
+        content="CoKitchens is striving to become a vibrant home for collective experimentation. We are looking to walk together with communities large and small in the discovering and rediscovering of ways to manage our own evolution. We believe that any evolutionary pathway that does not hold Earth Ethics as its foundation will only be temporary at best, which is why our experiments focus on local food as a means of weaving together relationships between our communities and the land."
         top="4%"
-        backgroundColor='#4c3f3f6e'
+        backgroundColor='rgb(87 125 174 / 19%)'
         fontColor="white"
       ></BackgroundImageBanner>
       <Box style={{ paddingTop: '40px', width: '100%' }}>
@@ -35,7 +35,7 @@ const Home = () => {
             margin: '20px 18%'
           }}
         >
-          We bring together life experiences, conversations and research to assemble an initial prototype to learn from and build off of. It is made up of the 4 following rituals:
+          We bring together our own life experiences, conversations and research to assemble an initial prototype to learn from and build off of. It is made up of the 4 following rituals:
         </Typography>
         <Box style={{
           textAlign: 'center'

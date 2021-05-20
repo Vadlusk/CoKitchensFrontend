@@ -9,14 +9,14 @@ const BackgroundImageBanner = (props) => {
         <Card
           style={{
             position: 'absolute',
-            padding: '70px',
+            padding: '40px',
             zIndex: '1',
             top: props.top,
             color: props.fontColor,
             background: props.backgroundColor,
             margin: '0 40px'
           }}
-          elevation={1}
+          elevation={3}
         >
           <Typography
             variant="h6"
