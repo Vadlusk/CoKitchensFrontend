@@ -19,7 +19,7 @@ const BackgroundImageBanner = (props) => {
           elevation={3}
         >
           <Typography
-            variant="h6"
+            variant="h2"
             style={{ textAlign: 'center' }}>
             {props.content}
           </Typography>

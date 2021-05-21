@@ -52,6 +52,7 @@ const Navbar = () => {
     return (
       <>
       <IconButton
+        style={{ margin: '5px' }}
         {...{
           edge: 'end',
           color: 'inherit',
@@ -82,8 +83,9 @@ const Navbar = () => {
        </Drawer>
        <Typography
          style={{
-           display: 'inline',
-           marginLeft: '75px'
+           position: 'fixed',
+           right: '20px',
+           top: '20px'
          }}
          color="inherit">
          <S.Link href="/" color="inherit">CoKitchens</S.Link>

@@ -11,7 +11,7 @@ const ElementCard = (props) => {
         padding: '25px 5px',
         display: 'inline-block',
         width: '300px',
-        height: '300px',
+        height: '400px',
         margin: '20px',
         backgroundImage: `url(${ElementCardBackground})`,
         backgroundSize: 'cover',

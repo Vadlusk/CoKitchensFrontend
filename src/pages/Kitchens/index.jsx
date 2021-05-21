@@ -15,14 +15,13 @@ const Kitchens = () => {
         style={{
           margin: '20px',
           padding: '20px',
-          backgroundColor: '#47660f',
-          color: 'white'
+          backgroundColor: 'rgb(71 102 15 / 21%)'
         }}
       >
         <Typography
           variant="h5"
           style={{ textAlign: 'center' }}
-        >If you are interested in starting a CoKitchen where you live, please reach out. You can find our info on the contact page.</Typography>
+        >Want to facilitate CoKitchen gatherings where you live? Please reach out. Info is on the contact page.</Typography>
       </Card>
         {kitchens.map(kitchen =>
           <>

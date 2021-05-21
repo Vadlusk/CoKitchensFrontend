@@ -17,7 +17,7 @@ const Team = () => {
       <S.BackgroundImageWrapper>
         <S.BackgroundImgage1></S.BackgroundImgage1>
       </S.BackgroundImageWrapper>
-      <Typography style={{ padding: '20px 0 0 20px', fontSize: '1.75rem', fontWeight: '800' }}>Stewards of the Platform</Typography>
+      <Typography style={{ padding: '20px 0 0 20px', fontSize: '1.75rem', fontWeight: '800' }}>Platform Stewards</Typography>
       <Typography>
         {teamMembers.stewards.map(steward => // shuffle these everytime
           <>
