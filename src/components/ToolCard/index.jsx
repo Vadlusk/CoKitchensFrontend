@@ -1,32 +1,43 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+// import BlueCardBackground from './Assets/blue-card.png'
+import BrownCardBackground from './Assets/brown-card.png'
 
-import { Card, Typography, CardMedia, CardContent, CardHeader } from '@material-ui/core'
+import { Card, Typography, CardContent, CardHeader, CardMedia } from '@material-ui/core'
 
-const ToolCard = (props) => {
+const ElementCard = (props) => {
   return (
     <>
       <Card style={{
-        maxWidth: '500px',
-        minHeight: '500px',
-        margin: '30px',
+        padding: '25px 5px',
         display: 'inline-block',
-        verticalAlign: 'top'
-      }} elevation={3}>
-        <CardHeader
-         title={props.name}
-         style={{ paddingBottom: '3px', paddingLeft: '20px' }}
+        width: '500px',
+        height: '400px',
+        margin: '20px',
+        backgroundImage: `url(${BrownCardBackground})`,
+        backgroundSize: 'cover',
+        color: 'white'
+      }} elevation={5}>
+        <CardMedia
+          style={{ height: '200px', width: '95%', margin: '0px auto' }}
+          image={props.img}
+          title={props.name}
         />
-        {props.img &&
-          <CardMedia
-            style={{ height: '200px', width: '95%', margin: '0px auto' }}
-            image={props.img}
-            title={props.name}
-          />
-        }
-
+        <CardHeader
+         style={{
+           textAlign: 'center'
+         }}
+        />
         <CardContent>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography
+            variant="body2"
+            color="textSecondary"
+            component="p"
+            style={{
+              textAlign: 'center',
+              color: 'white'
+            }}
+          >
             {props.description}
           </Typography>
          </CardContent>
@@ -35,9 +46,9 @@ const ToolCard = (props) => {
   )
 }
 
-export default ToolCard
+export default ElementCard
 
-ToolCard.propTypes = {
+ElementCard.propTypes = {
   img: PropTypes.string,
   name: PropTypes.string,
   description: PropTypes.string

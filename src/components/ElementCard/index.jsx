@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ElementCardBackground from './Assets/element-card-background.png'
+// import ElementCardBackground from './Assets/brown-background-card2.png'
 
 import { Card, Typography, CardContent, CardHeader } from '@material-ui/core'
 
