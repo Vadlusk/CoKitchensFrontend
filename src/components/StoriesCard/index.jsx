@@ -52,7 +52,7 @@ export default StoryCard
 StoryCard.propTypes = {
   type: PropTypes.string,
   title: PropTypes.string,
-  content: PropTypes.text,
+  content: PropTypes.string,
   created_at: PropTypes.string,
   img: PropTypes.string,
   video_url: PropTypes.string

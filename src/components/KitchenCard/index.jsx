@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Card, Typography, CardMedia, CardContent, CardHeader, Divider } from '@material-ui/core'
+import { Card, Typography, CardMedia, CardContent, CardHeader, Divider, Box } from '@material-ui/core'
 
 import SkillCard from '../SkillCard'
 
@@ -21,7 +21,7 @@ const KitchenCard = (props) => {
          style={{ padding: '20px' }}
         />
         <Divider />
-        <div style={{ padding: '20px', paddingBottom: '40px' }}>
+        <div style={{ padding: '20px', paddingBottom: '40px', textAlign: 'center' }}>
           <CardMedia
             style={{
               height: '300px',
@@ -37,9 +37,26 @@ const KitchenCard = (props) => {
             width: '45%',
             verticalAlign: 'top'
           }}>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {props.description}
-            </Typography>
+            <Box
+              style={{
+                textAlign: 'center'
+              }}
+            >
+              <Typography
+                variant="subtitle1"
+                style={{
+                  paddingBottom: '20px'
+                }}
+                >
+                <b>CoKitchen Facilitators:</b> Connor Harron, Benji Ross, Dan Gamble
+              </Typography>
+              <Typography
+                variant="body2"
+                color="textSecondary"
+              >
+                {props.description}
+              </Typography>
+            </Box>
            </CardContent>
         </div>
         <Divider textAlign="center">Local Skillsets</Divider>
@@ -54,9 +71,9 @@ const KitchenCard = (props) => {
             style={{ paddingBottom: '10px' }}
           >Skills to Distribute</Typography>
           {distributingSkills.map(skill =>
-            <>
+            <Box key={skill} style={{ display: 'inline' }}>
               <SkillCard skill={skill}></SkillCard>
-            </>
+            </Box>
           )}
         </div>
         <div
@@ -70,9 +87,9 @@ const KitchenCard = (props) => {
             style={{ paddingBottom: '10px' }}
           >Looking to Learn</Typography>
           {learningSkills.map(skill =>
-            <>
+            <Box key={skill} style={{ display: 'inline' }}>
               <SkillCard skill={skill}></SkillCard>
-            </>
+            </Box>
           )}
         </div>
        </Card>

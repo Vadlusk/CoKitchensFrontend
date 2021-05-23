@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Divider, Card, Typography } from '@material-ui/core'
+import { Divider, Card, Typography, Box } from '@material-ui/core'
 import KitchenCard from '../../components/KitchenCard'
 
 import useKitchens from '../../hooks/useKitchens'
@@ -24,15 +24,14 @@ const Kitchens = () => {
         >Want to facilitate CoKitchen gatherings where you live? Please reach out. Info is on the contact page.</Typography>
       </Card>
         {kitchens.map(kitchen =>
-          <>
-          <KitchenCard
-            key={kitchen.name}
-            name={kitchen.name}
-            img={kitchen.img}
-            description={kitchen.description}
-            locationName={kitchen.location_name}
-          ></KitchenCard>
-          </>
+          <Box key={kitchen.name}>
+            <KitchenCard
+              name={kitchen.name}
+              img={kitchen.img}
+              description={kitchen.description}
+              locationName={kitchen.location_name}
+            ></KitchenCard>
+          </Box>
         )}
       <Divider />
     </>

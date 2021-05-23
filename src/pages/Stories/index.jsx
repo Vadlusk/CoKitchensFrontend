@@ -2,7 +2,7 @@ import React from 'react'
 
 import StoryCard from '../../components/StoriesCard'
 import BackgroundImageBanner from '../../components/BackgroundImageBanner'
-import { Typography, Button, FormControl, InputLabel, Input } from '@material-ui/core'
+import { Typography, Button, FormControl, InputLabel, Input, Box } from '@material-ui/core'
 
 import useStories from '../../hooks/useStories'
 import styled from 'styled-components'
@@ -15,9 +15,8 @@ const Stories = () => {
     <>
       <BackgroundImageBanner img={rockBackgroundImage}></BackgroundImageBanner>
       {stories.map(story =>
-        <>
+        <Box key={story.title} style={{ display: 'inline' }}>
           <StoryCard
-            key={story.title}
             type={story.type}
             title={story.title}
             img={story.img}
@@ -25,7 +24,7 @@ const Stories = () => {
             created_at={story.created_at}
             video_url={story.video_url}
            ></StoryCard>
-        </>
+        </Box>
       )}
       <S.EmailSubscriptionSection>
       <div style={{ padding: '50px', display: 'grid', paddingBottom: '0' }}>

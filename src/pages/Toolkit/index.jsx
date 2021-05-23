@@ -37,9 +37,9 @@ const Toolkit = () => {
         }}
       >
       {tools.map(tool =>
-        <>
-        <ToolCard key={tool.name} name={tool.name} img={tool.img} description={tool.description}></ToolCard>
-        </>
+        <Box key={tool.name} style={{ display: 'inline' }}>
+          <ToolCard name={tool.name} img={tool.img} description={tool.description}></ToolCard>
+        </Box>
       )}
       </Box>
     </>

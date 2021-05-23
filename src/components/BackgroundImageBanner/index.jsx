@@ -57,8 +57,8 @@ export default BackgroundImageBanner
 BackgroundImageBanner.propTypes = {
   img: PropTypes.string.isRequired,
   height: PropTypes.string,
-  content: PropTypes.string.isRequired,
-  top: PropTypes.string.isRequired,
-  backgroundColor: PropTypes.string.isRequired,
-  fontColor: PropTypes.string.isRequired
+  content: PropTypes.string,
+  top: PropTypes.string,
+  backgroundColor: PropTypes.string,
+  fontColor: PropTypes.string
 }

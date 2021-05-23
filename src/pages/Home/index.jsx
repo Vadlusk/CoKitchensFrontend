@@ -14,7 +14,7 @@ const Home = () => {
       <BackgroundImageBanner
         img={reeseHillBackgroundImage}
         height={topBannerHeight}
-        content="Trying to discover healing evolutionary pathways forward"
+        content="Experimenting to discover healing evolutionary pathways forward"
         top="9%"
         backgroundColor='rgb(87 125 174 / 19%)'
         fontColor="white"
