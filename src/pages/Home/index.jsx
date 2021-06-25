@@ -1,12 +1,31 @@
 import React from 'react'
 import { Typography, Box } from '@material-ui/core'
+import { makeStyles } from '@material-ui/styles'
+import { LocalFireDepartment, Construction, FoodBank, LightMode } from '@material-ui/icons'
+
 import BackgroundImageBanner from '../../components/BackgroundImageBanner'
 import ElementCard from '../../components/ElementCard'
-import { LocalFireDepartment, Construction, FoodBank, LightMode } from '@material-ui/icons'
 
 import reeseHillBackgroundImage from './Assets/reese-hill-background.jpeg'
 
+const useStyles = makeStyles({
+  titleContainer: {
+    paddingTop: '40px', width: '100%'
+  },
+  titleContainerText: {
+    textAlign: 'center'
+  },
+  titleSubtext: {
+    textAlign: 'center',
+    margin: '20px 18%'
+  },
+  deck: {
+    textAlign: 'center'
+  }
+})
+
 const Home = () => {
+  const classes = useStyles()
   const topBannerHeight = '600px'
 
   return (
@@ -14,32 +33,25 @@ const Home = () => {
       <BackgroundImageBanner
         img={reeseHillBackgroundImage}
         height={topBannerHeight}
-        content="Experimenting to discover healing evolutionary pathways forward"
+        content="Searching for ways to weave people and places together"
         top="9%"
         backgroundColor='rgb(87 125 174 / 19%)'
         fontColor="white"
       ></BackgroundImageBanner>
-      <Box style={{ paddingTop: '40px', width: '100%' }}>
+      <Box className={classes.titleContainer}>
         <Typography
           variant="h4"
-          style={{
-            textAlign: 'center'
-          }}
+          className={classes.titleContainerText}
         >
           Current Prototype (2021)
         </Typography>
         <Typography
           variant="subtitle1"
-          style={{
-            textAlign: 'center',
-            margin: '20px 18%'
-          }}
+          className={classes.titleSubtext}
         >
           We bring together our own life experiences, conversations and research to assemble an initial prototype to learn from and experiment off of. It is made up of the 4 following pillars:
         </Typography>
-        <Box style={{
-          textAlign: 'center'
-        }}>
+        <Box className={classes.deck}>
           <ElementCard
             title="Community Courses"
             titleImage={<LightMode fontSize="large" />}

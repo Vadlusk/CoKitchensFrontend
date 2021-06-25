@@ -52,7 +52,7 @@ const Navbar = () => {
     return (
       <>
       <IconButton
-        style={{ margin: '5px' }}
+        style={{ margin: '10px' }}
         {...{
           edge: 'end',
           color: 'inherit',
