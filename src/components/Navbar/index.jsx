@@ -35,7 +35,6 @@ const Navbar = () => {
           <Button href="/calendar" color="inherit">Calendar</Button>
           <Button href="/kitchens" color="inherit">Kitchens</Button>
           <Button href="/stories" color="inherit"> Stories </Button>
-          <Button href="/tools" color="inherit"> Toolkit </Button>
           <Button href="/team" color="inherit">    Team    </Button>
           <Button href="/contact" color="inherit"> Contact </Button>
         </S.DesktopMenu>
@@ -73,7 +72,6 @@ const Navbar = () => {
          <div>
            <S.MobileMenu>
              <Button href="/calendar" color="inherit">Calendar</Button>
-             <Button href="/toolkit" color="inherit"> Toolkit </Button>
              <Button href="/kitchens" color="inherit">Kitchens</Button>
              <Button href="/stories" color="inherit"> Stories </Button>
              <Button href="/team" color="inherit">    Team    </Button>
