@@ -1,54 +1,79 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Card, Typography, CardMedia, CardContent, CardHeader, Divider, Box } from '@material-ui/core'
+import { makeStyles } from '@material-ui/styles'
 
-import SkillCard from '../SkillCard'
+const useStyles = makeStyles((theme) => ({
+  cardContainer: {
+    maxWidth: '1300px',
+    margin: '30px',
+    borderBottom: '1px solid black'
+  },
+  cardHeader: {
+    padding: '20px'
+  },
+  kitchenImgDescriptionContainer: {
+    padding: '20px',
+    paddingBottom: '40px',
+    textAlign: 'center'
+  },
+  kitchenImage: {
+    height: '300px',
+    margin: '0px auto',
+    [theme.breakpoints.down('md')]: {
+      display: 'block',
+      width: '90%'
+    },
+    [theme.breakpoints.up('md')]: {
+      display: 'inline-block',
+      width: '45%'
+    }
+  },
+  kitchenDescription: {
+    verticalAlign: 'top',
+    [theme.breakpoints.down('md')]: {
+      display: 'block',
+      width: '90%'
+    },
+    [theme.breakpoints.up('md')]: {
+      display: 'inline-block',
+      width: '45%'
+    }
+  },
+  kitchenDescriptionContainer: {
+    textAlign: 'center'
+  },
+  kitchenSubtitle: {
+    paddingBottom: '20px'
+  }
+}))
 
 const KitchenCard = (props) => {
+  const classes = useStyles()
+
   const kitchenTitle = `CoKitchen - ${props.name}, ${props.locationName}`
-  const distributingSkills = ['Forestry', 'Composting', 'Carpentry', 'Upcycling']
-  const learningSkills = ['Water Management', 'Tree Grafting']
 
   return (
     <>
-      <Card style={{
-        maxWidth: '1300px',
-        margin: '30px',
-        borderBottom: '1px solid black'
-      }} elevation={0}>
+      <Card className={classes.cardContainer} elevation={0}>
         <CardHeader
          title={kitchenTitle}
-         style={{ padding: '20px' }}
+         className={classes.cardHeader}
         />
         <Divider />
-        <div style={{ padding: '20px', paddingBottom: '40px', textAlign: 'center' }}>
+        <div className={classes.kitchenImgDescriptionContainer}>
           <CardMedia
-            style={{
-              height: '300px',
-              width: '45%',
-              margin: '0px auto',
-              display: 'inline-block'
-            }}
+            className={classes.kitchenImage}
             image={props.img}
             title={props.name}
           />
-          <CardContent style={{
-            display: 'inline-block',
-            width: '45%',
-            verticalAlign: 'top'
-          }}>
-            <Box
-              style={{
-                textAlign: 'center'
-              }}
-            >
+          <CardContent className={classes.kitchenDescription}>
+            <Box className={classes.kitchenDescriptionContainer}>
               <Typography
                 variant="subtitle1"
-                style={{
-                  paddingBottom: '20px'
-                }}
-                >
-                <b>CoKitchen Facilitators:</b> Connor Harron, Benji Ross, Dan Gamble
+                className={classes.kitchenSubtitle}
+              >
+                <b>CoKitchen Facilitators:</b> Connor Harron, Benji Ross, Max McFarland
               </Typography>
               <Typography
                 variant="body2"
@@ -58,39 +83,6 @@ const KitchenCard = (props) => {
               </Typography>
             </Box>
            </CardContent>
-        </div>
-        <Divider textAlign="center">Local Skillsets</Divider>
-        <div
-          style={{
-            width: '45%',
-            display: 'inline-block',
-            padding: '20px'
-          }}
-        >
-          <Typography variant="h6"
-            style={{ paddingBottom: '10px' }}
-          >Skills to Distribute</Typography>
-          {distributingSkills.map(skill =>
-            <Box key={skill} style={{ display: 'inline' }}>
-              <SkillCard skill={skill}></SkillCard>
-            </Box>
-          )}
-        </div>
-        <div
-          style={{
-            width: '45%',
-            display: 'inline-block',
-            padding: '20px'
-          }}
-        >
-          <Typography variant="h6"
-            style={{ paddingBottom: '10px' }}
-          >Looking to Learn</Typography>
-          {learningSkills.map(skill =>
-            <Box key={skill} style={{ display: 'inline' }}>
-              <SkillCard skill={skill}></SkillCard>
-            </Box>
-          )}
         </div>
        </Card>
      </>

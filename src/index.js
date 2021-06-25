@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
+import { createTheme, ThemeProvider } from '@material-ui/core/styles'
 
 import './styles/global.css'
 
-const theme = createMuiTheme()
+const theme = createTheme()
 
 ReactDOM.render(
   <React.StrictMode>
